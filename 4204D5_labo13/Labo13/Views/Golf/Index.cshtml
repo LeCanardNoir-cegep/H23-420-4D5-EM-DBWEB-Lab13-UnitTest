@@ -1,0 +1,36 @@
+﻿@model List<VwDetailsScoreGolfeur>
+
+<div class="container">
+    <h1>Index</h1>
+
+    <a asp-action="CreateScoreTrou">Ajouter un score trou</a><br />
+    <a asp-action="ScoresTrou">Voir les scores par trou</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>GolfeurID</th>
+                <th>Nom</th>
+                <th>ScoreTotal</th>
+                <th>NbTrous</th>
+                <th>ScoreMoyen</th>
+                <th>DatePremierTrou</th>
+                <th>DateDernierTrou</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.GolfeurId</td>
+                    <td>@item.Nom</td>
+                    <td>@item.ScoreTotal</td>
+                    <td>@item.NbTrous</td>
+                    <td>@item.ScoreMoyen</td>
+                    <td>@item.DatePremierTrou</td>
+                    <td>@item.DateDernierTrou</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

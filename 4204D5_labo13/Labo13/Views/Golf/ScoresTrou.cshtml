@@ -1,0 +1,39 @@
+﻿@model List<ScoreTrou>
+
+<div class="container">
+    <h1>Scores trou</h1>
+
+    <a asp-action="Index">Retour à l'index</a>
+    <p class="text-danger">@ViewData["message"]</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ScoreTrouID</th>
+                <th>Score</th>
+                <th>Terme</th>
+                <th>DateTrou</th>
+                <th>GolfeurID</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>@item.ScoreTrouId</td>
+                        <td>@item.Score</td>
+                        <td>@item.Terme</td>
+                        <td>@item.DateTrou</td>
+                        <td>@item.GolfeurId</td>
+                        <td>
+                            <form asp-action="DeleteScoreTrou">
+                                <input hidden name="id" value="@item.ScoreTrouId">
+                                <button type="submit">❌</button>
+                            </form>
+                        </td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+</div>
