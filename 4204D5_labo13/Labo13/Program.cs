@@ -8,7 +8,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<Labo13Context>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Labo13"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Labo13Test"));
 });
 
 var app = builder.Build();
