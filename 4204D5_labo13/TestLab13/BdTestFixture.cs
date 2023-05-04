@@ -10,8 +10,8 @@ namespace TestLab13
 {
     public class BdTestFixture
     {
-        private const string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=Lab13Test;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
-        private static bool _databaseInitialized;
+        private const string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=Labo13;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
+        //private static bool _databaseInitialized;
 
         public Labo13Context CreateContext()
         {

@@ -28,8 +28,4 @@
     <ProjectReference Include="..\Labo13\Labo13.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SqlScript\" />
-  </ItemGroup>
-
 </Project>
